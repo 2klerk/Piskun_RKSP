@@ -7,7 +7,7 @@ import io.rsocket.transport.netty.server.TcpServerTransport;
 public class TaskServer {
     public static void main(String[] args) {
         RSocketServer.create(SocketAcceptor.with(new TaskHandler()))
-                .bind(TcpServerTransport.create(7000))
+                .bind(TcpServerTransport.create(7001))
                 .block()
                 .onClose()
                 .block();

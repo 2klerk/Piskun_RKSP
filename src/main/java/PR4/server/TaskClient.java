@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 public class TaskClient {
     public static void main(String[] args) {
         RSocket socket = RSocketConnector.create()
-                .connect(TcpClientTransport.create("localhost", 7000))
+                .connect(TcpClientTransport.create("localhost", 7001))
                 .block();
 
         // Request-Response: Получить задачу по ID
